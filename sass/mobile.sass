@@ -1,7 +1,43 @@
 @include mediaXL
 
 @include mediaLg
+	header
+		.menu-list
+			display: none
+
+			&.show
+				display: block
+				position: absolute
+				top: 69px
+				left: 0
+				right: 0
+				width: 100%
+				text-align: center
+				border-top: 1px solid #000
+				z-index: 5
+	
+				li
+					margin-left: 0
+					background: $header-color
+
+					a
+						display: block
+						padding: 10px 0
+						border-bottom: 1px solid #000
+
+					button
+						margin-right: 0
+						padding: 15px 30vw
+						background: darken($header-color, 15)
+
+		.btn__menu
+			display: block
+			margin-right: 15px
 
 @include mediaMd
 
 @include mediaSm
+	header
+		.header-logo
+			img
+				width: 220px

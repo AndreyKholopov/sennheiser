@@ -1,0 +1,45 @@
+header
+	position: sticky
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 70px
+	background: $header-color
+
+	.btn__menu
+		width: 30px
+		display: none
+		transition: all 1s ease-out
+		cursor: pointer
+
+		div
+			height: 5px
+			background-color: set-text-color($header-color)
+			margin-bottom: 5px
+
+		&.close
+			@include sandwich-to-x()
+
+	.menu-list
+		display: flex
+		align-items: center
+
+		&.Show
+			visibility: visible
+
+		li
+			margin-left: 30px
+
+			a
+				font-weight: 700
+				color: set-text-color($header-color)
+				font-size: 17px
+
+			button
+				font-weight: 700
+				font-size: 17px
+				margin-right: 10px
+				padding: 15px 30px
+				background: darken($header-color,10)
+				color: set-text-color($header-color)
+				@include neon-button($neon-color)

@@ -9,7 +9,6 @@ $form-color: #fada5e
 		@return #fff
 
 @mixin neon-button($color)
-	color: set-text-color($header-color)
 	border-radius: 8px
 	border: none
 	transition: .5s
@@ -17,6 +16,19 @@ $form-color: #fada5e
 	&:hover
 		background: $color
 		box-shadow: 0 0 10px $color, 0 0 40px $color, 0 0 80px $color
+
+@mixin sandwich-to-x
+	transform: rotate(180deg)
+
+	div
+		&:nth-child(1)
+			transform: rotate(45deg) translate(9px, 5px)
+
+		&:nth-child(2)
+			opacity: 0
+
+		&:nth-child(3)
+			transform: rotate(-45deg) translate(9px, -5px)
 
 //Media Query Mixins
 @mixin mediaSm
@@ -28,7 +40,7 @@ $form-color: #fada5e
 		@content
 
 @mixin mediaLg
-	@media screen and (min-width: 769px) and (max-width: 1170px)
+	@media screen and (max-width: 1170px)
 		@content
 
 @mixin mediaXL

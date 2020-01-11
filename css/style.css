@@ -11,6 +11,7 @@ a {
 }
 
 header {
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,15 +21,32 @@ header {
 header .btn__menu {
   width: 30px;
   display: none;
+  transition: all 1s ease-out;
+  cursor: pointer;
 }
 header .btn__menu div {
   height: 5px;
   background-color: #000;
   margin-bottom: 5px;
 }
+header .btn__menu.close {
+  transform: rotate(180deg);
+}
+header .btn__menu.close div:nth-child(1) {
+  transform: rotate(45deg) translate(9px, 5px);
+}
+header .btn__menu.close div:nth-child(2) {
+  opacity: 0;
+}
+header .btn__menu.close div:nth-child(3) {
+  transform: rotate(-45deg) translate(9px, -5px);
+}
 header .menu-list {
   display: flex;
   align-items: center;
+}
+header .menu-list.Show {
+  visibility: visible;
 }
 header .menu-list li {
   margin-left: 30px;
@@ -54,6 +72,15 @@ header .menu-list li button:hover {
   box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
 }
 
+main {
+  background: #444;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form #gray {
   background: rgba(0, 0, 0, 0.75);
   position: fixed;
@@ -67,7 +94,7 @@ header .menu-list li button:hover {
 .form #form__inner {
   width: 300px;
   height: 550px;
-  margin: 40px auto;
+  margin: 20px auto;
   background: #fef6da;
   border: 2px solid #fada5e;
   box-shadow: 0 0 10px #fada5e, 0 0 40px #fada5e, 0 0 80px #fada5e;
@@ -133,6 +160,46 @@ header .menu-list li button:hover {
 .form #form__inner .bying-form button:hover {
   background: #fada5e;
   box-shadow: 0 0 10px #fada5e, 0 0 40px #fada5e, 0 0 80px #fada5e;
+}
+
+@media screen and (max-width: 1170px) {
+  header .menu-list {
+    display: none;
+  }
+  header .menu-list.show {
+    display: block;
+    position: absolute;
+    top: 69px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #000;
+    z-index: 5;
+  }
+  header .menu-list.show li {
+    margin-left: 0;
+    background: #c7c6c1;
+  }
+  header .menu-list.show li a {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+  }
+  header .menu-list.show li button {
+    margin-right: 0;
+    padding: 15px 30vw;
+    background: #a3a199;
+  }
+  header .btn__menu {
+    display: block;
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  header .header-logo img {
+    width: 220px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
