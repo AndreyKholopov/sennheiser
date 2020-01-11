@@ -5,12 +5,100 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<header>
+			<div class="header-logo">
+				<img src="images/logo.png" alt="logo">
+			</div>
+
+			<div class="header-menu">
+				<div class="btn__menu">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+
+				<ul class="menu-list">
+					<li><a data-page="home" href="#">Headphones</a></li>
+					<li><a data-page="colors" href="#">Colors</a></li>
+					<li><a data-page="noise" href="#">Reduces noise</a></li>
+					<li><a data-page="comfort" href="#">Comfort</a></li>
+					<li><button onclick="show('block')" class="btn__buy">I want it already</button></li>
+				</ul>
+			</div>
+	</header>
 	
-	
+	<main>
+		<section class="home">
+			
+		</section>
+
+		<section class="colors">
+			
+		</section>
+
+		<section class="noise">
+			
+		</section>
+
+		<section class="comfort">
+
+		</section>
+	</main>
+
+	<section class="form">
+		<div onclick="show('none')" id="gray"></div>
+
+		<div id="form__inner">
+			<div onclick="show('none')" class="close-btn">
+				<div></div>
+				<div></div>
+			</div>
+
+			<div class="bying-form">
+				<h3>Contact Information</h3>
+				<form action="index.html" name="buy">
+					<div>
+						<label for="name">Full name</label>
+						<input type="text" name="name" class="input">
+					</div>
+					
+					<div>
+						<label for="email">Email</label>
+						<input type="email" name="email" class="input">
+					</div>
+
+					<div>
+						<label for="country">Country</label>
+						<select name="country" class="input">
+							<option>Select your country</option>
+							<option value="Russia">Russia</option>
+							<option value="Ukraine">Ukraine</option>
+							<option value="Belarus">Belarus</option>
+						</select>
+						<div class="select-arrow"></div> 
+					</div>
+
+					<div>
+						<label for="city">City</label>
+						<input type="text" name="city" class="input">
+					</div>
+
+					<div>
+						<label for="adress">Adress</label>
+						<input type="text" name="adress" class="input">
+					</div>					
+
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
 	<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background: #c7c6c1;
+}
+header .btn__menu {
+  width: 30px;
+  display: none;
+}
+header .btn__menu div {
+  height: 5px;
+  background-color: #000;
+  margin-bottom: 5px;
+}
+header .menu-list {
+  display: flex;
+  align-items: center;
+}
+header .menu-list li {
+  margin-left: 30px;
+}
+header .menu-list li a {
+  font-weight: 700;
+  color: #000;
+  font-size: 17px;
+}
+header .menu-list li button {
+  font-weight: 700;
+  font-size: 17px;
+  margin-right: 10px;
+  padding: 15px 30px;
+  background: #afada6;
+  color: #000;
+  border-radius: 8px;
+  border: none;
+  transition: 0.5s;
+}
+header .menu-list li button:hover {
+  background: #2196f3;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+}
+
+.form #gray {
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  z-index: 9;
+}
+.form #form__inner {
+  width: 300px;
+  height: 550px;
+  margin: 40px auto;
+  background: #fef6da;
+  border: 2px solid #fada5e;
+  box-shadow: 0 0 10px #fada5e, 0 0 40px #fada5e, 0 0 80px #fada5e;
+  border-radius: 15px;
+  z-index: 11;
+  display: none;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.form #form__inner .close-btn {
+  cursor: pointer;
+  margin: 12px 0 0 266px;
+}
+.form #form__inner .close-btn div {
+  width: 28px;
+  height: 2px;
+  margin: 0 0 5px 0;
+  background: #000;
+}
+.form #form__inner .close-btn div:nth-child(1) {
+  transform: rotate(45deg) translate(0px, 5px);
+}
+.form #form__inner .close-btn div:nth-child(2) {
+  transform: rotate(-45deg) translate(0px, -5px);
+}
+.form #form__inner .bying-form {
+  width: 250px;
+  margin: 0px auto 20px auto;
+  text-align: center;
+}
+.form #form__inner .bying-form h3 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.form #form__inner .bying-form div label {
+  margin-bottom: 10px;
+  display: block;
+  text-align: left;
+}
+.form #form__inner .bying-form div .input {
+  width: 230px;
+  padding: 5px;
+  margin-bottom: 15px;
+  background: white;
+}
+.form #form__inner .bying-form button {
+  margin-top: 20px;
+  font-weight: 700;
+  color: #000;
+  font-size: 17px;
+  padding: 15px 85px;
+  background: #fceba8;
+  color: #000;
+  border-radius: 8px;
+  border: none;
+  transition: 0.5s;
+}
+.form #form__inner .bying-form button:hover {
+  background: #fada5e;
+  box-shadow: 0 0 10px #fada5e, 0 0 40px #fada5e, 0 0 80px #fada5e;
+}
+
+/*# sourceMappingURL=style.css.map */

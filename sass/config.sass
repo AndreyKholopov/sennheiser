@@ -1,3 +1,23 @@
+$header-color: #c7c6c1
+$neon-color: #2196f3
+$form-color: #fada5e
+
+@function set-text-color($color)
+	@if (lightness($color) > 40)
+		@return #000
+	@else 
+		@return #fff
+
+@mixin neon-button($color)
+	color: set-text-color($header-color)
+	border-radius: 8px
+	border: none
+	transition: .5s
+
+	&:hover
+		background: $color
+		box-shadow: 0 0 10px $color, 0 0 40px $color, 0 0 80px $color
+
 //Media Query Mixins
 @mixin mediaSm
 	@media screen and (max-width: 500px)

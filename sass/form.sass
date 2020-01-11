@@ -1,0 +1,75 @@
+.form
+	#gray
+		background: rgba(0,0,0, 0.75)
+		position: fixed
+		right: 0
+		left: 0
+		top: 0
+		bottom: 0
+		display: none
+		z-index: 9
+
+	#form__inner
+		width: 300px
+		height: 550px
+		margin: 40px auto
+		background: lighten($form-color, 25)
+		border: 2px solid $form-color
+		box-shadow: 0 0 10px $form-color, 0 0 40px $form-color, 0 0 80px $form-color
+		border-radius: 15px
+		z-index: 11
+		display: none
+		position: fixed
+		right: 0
+		left: 0
+		top: 0
+		bottom: 0
+
+		.close-btn
+			cursor: pointer
+			margin: 12px 0 0 266px
+
+			div 
+				width: 28px
+				height: 2px
+				margin: 0 0 5px 0
+				background: set-text-color($form-color)
+
+				&:nth-child(1) 
+					transform: rotate(45deg) translate(0px, 5px)
+
+				&:nth-child(2) 
+					transform: rotate(-45deg) translate(0px, -5px)
+
+		.bying-form
+			width: 250px
+			margin: 0px auto 20px auto
+			text-align: center
+
+			h3
+				margin-top: 15px
+				margin-bottom: 20px
+				font-size: 24px
+				font-weight: 700
+
+			div
+
+				label
+					margin-bottom: 10px
+					display: block
+					text-align: left
+
+				.input
+					width: 230px
+					padding: 5px
+					margin-bottom: 15px
+					background: lighten($form-color, 40)
+
+			button
+				margin-top: 20px
+				font-weight: 700
+				color: set-text-color($form-color)
+				font-size: 17px
+				padding: 15px 85px
+				background: lighten($form-color, 15)
+				@include neon-button($form-color)
