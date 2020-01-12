@@ -24,16 +24,16 @@
 
 				<ul class="menu-list">
 					<li>
-						<a data-page="home" href="#home">Headphones</a>
+						<a data-page="home" href="#home-a">Headphones</a>
 					</li>
 					<li>
-						<a data-page="colors" href="#colors">Colors</a>
+						<a data-page="colors" href="#colors-a">Colors</a>
 					</li>
 					<li>
-						<a data-page="noise" href="#noise">Reduces noise</a>
+						<a data-page="noise" href="#noise-a">Reduces noise</a>
 					</li>
 					<li>
-						<a data-page="comfort" href="#comfort">Comfort</a>
+						<a data-page="comfort" href="#comfort-a">Comfort</a>
 					</li>
 					<li>
 						<button onclick="show('block')" class="btn__buy">I want it already</button>
@@ -44,32 +44,28 @@
 	</header>
 	
 	<main>
-		<section class="home">
-			<a name="home"></a>
+		<section id="home-a" class="home">
 			<div class="home-presentation">
 				<h1>The best you heard</h1>
 				<p>MB 360 UC is a double-sided, Bluetooth® headset with Active Noise Cancellation that reduces background noise to increase work focus. Designed for today’s style conscious office workers on the move, who prefer to use a single headset for both calls and entertainment - without compromising on business performance or audio quality.</p>
 			</div>
 		</section>
 
-		<section class="colors">
-			<a name="colors" id="colors-a"></a>
+		<section id="colors-a" class="colors">
 			<div class="colors-presentation">
 				<h1>colors for every taste</h1>
 				<p>The elegant laconic design of the headphones organically complements the Alcantara faux suede finish, which is pleasant to the touch, repels moisture, is resistant to wear and is in many ways similar to natural suede. This material is used to trim the headband, as well as to trim the ear pads.</p>
 			</div>
 		</section>
 
-		<section class="noise">
-			<a name="noise" id="noise-a"></a>
+		<section id="noise-a" class="noise">
 			<div class="noise-presentation">
 				<h1>Reduces distracting noise</h1>
 				<p>MB 360 UC is a double-sided, Bluetooth® headset with Active Noise Cancellation that reduces background noise to increase work focus.</p>
 			</div>
 		</section>
 
-		<section class="comfort">
-			<a name="comfort" id="comfort-a"></a>
+		<section id="comfort-a" class="comfort">
 			<div class="comfort-presentation">
 				<h1>Stay comfortable with soft ear pads</h1>
 				<p>The new Sennheiser SDW 5000 wireless DECT headset Series lives up to the promise of a truly mobile, collaborative workplace and is designed with the future’s business communication in mind.</p>
@@ -90,17 +86,17 @@
 				<h3>Contact Information</h3>
 				<form action="index.html" name="buy">
 					<div>
-						<label for="name">Full name</label>
+						<label for="name" id="name-label" >Full name</label>
 						<input type="text" name="name" class="input">
 					</div>
 					
 					<div>
-						<label for="email">Email</label>
+						<label for="email" id="email-label" >Email</label>
 						<input type="email" name="email" class="input">
 					</div>
 
 					<div>
-						<label for="country">Country</label>
+						<label for="country" id="country-label" >Country</label>
 						<select name="country" class="input">
 							<option>Select your country</option>
 							<option value="Russia">Russia</option>
@@ -111,12 +107,12 @@
 					</div>
 
 					<div>
-						<label for="city">City</label>
+						<label for="city" id="city-label" >City</label>
 						<input type="text" name="city" class="input">
 					</div>
 
 					<div>
-						<label for="adress">Adress</label>
+						<label for="adress" id="adress-label" >Adress</label>
 						<input type="text" name="adress" class="input">
 					</div>					
 
