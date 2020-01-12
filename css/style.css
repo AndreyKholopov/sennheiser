@@ -11,7 +11,8 @@ a {
 }
 
 header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,14 +72,97 @@ header .menu-list li button:hover {
   background: #2196f3;
   box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
 }
+header .menu-list .bubble {
+  position: absolute;
+  z-index: -2;
+  background: linear-gradient(to right, #484741, white, #484741);
+  margin-left: 0;
+  transform: scale(1.4);
+  transition: all 0.5s ease;
+  border: 2px solid #484741;
+  border-radius: 8px;
+}
 
-main {
-  background: #444;
-  width: 100%;
+main section {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+}
+main section a {
+  position: absolute;
+  top: 0;
+}
+main section a#colors-a {
+  top: 100vh;
+}
+main section a#noise-a {
+  top: 200vh;
+}
+main section a#comfort-a {
+  top: 300vh;
+}
+main section h1 {
+  font-size: 3rem;
+}
+main section p {
+  font-size: 15px;
+  line-height: 22px;
+}
+main section.home {
+  background: linear-gradient(to right, #333, #5c5c5c, #333, #5c5c5c);
+}
+main section.home .home-presentation {
+  padding: 30px;
+}
+main section.home .home-presentation h1 {
+  margin-left: 15px;
+  margin-bottom: 25px;
+  color: #fff;
+}
+main section.home .home-presentation p {
+  color: #fff;
+}
+main section.colors {
+  background: linear-gradient(to right bottom, #C9D6FF, white, #C9D6FF, white);
+}
+main section.colors .colors-presentation {
+  padding: 30px;
+}
+main section.colors .colors-presentation h1 {
+  margin-left: 15px;
+  margin-bottom: 25px;
+  color: #000;
+}
+main section.colors .colors-presentation p {
+  color: #000;
+}
+main section.noise {
+  background: linear-gradient(to right top, #d9a7c7, #f2e0eb, #d9a7c7, #f2e0eb);
+}
+main section.noise .noise-presentation {
+  padding: 30px;
+}
+main section.noise .noise-presentation h1 {
+  margin-left: 15px;
+  margin-bottom: 25px;
+  color: #000;
+}
+main section.noise .noise-presentation p {
+  color: #000;
+}
+main section.comfort {
+  background: linear-gradient(to right, #06beb6, #1ef8ee, #06beb6, #1ef8ee);
+}
+main section.comfort .comfort-presentation {
+  padding: 30px;
+}
+main section.comfort .comfort-presentation h1 {
+  margin-left: 15px;
+  margin-bottom: 25px;
+  color: #fff;
+}
+main section.comfort .comfort-presentation p {
+  color: #fff;
 }
 
 .form #gray {
@@ -95,9 +179,9 @@ main {
   width: 300px;
   height: 550px;
   margin: 20px auto;
-  background: #fef6da;
-  border: 2px solid #fada5e;
-  box-shadow: 0 0 10px #fada5e, 0 0 40px #fada5e, 0 0 80px #fada5e;
+  background: #bcc6df;
+  border: 2px solid #667db6;
+  box-shadow: 0 0 10px #667db6, 0 0 40px #667db6, 0 0 80px #667db6;
   border-radius: 15px;
   z-index: 11;
   display: none;
@@ -143,7 +227,7 @@ main {
   width: 230px;
   padding: 5px;
   margin-bottom: 15px;
-  background: white;
+  background: #f0f2f8;
 }
 .form #form__inner .bying-form button {
   margin-top: 20px;
@@ -151,15 +235,15 @@ main {
   color: #000;
   font-size: 17px;
   padding: 15px 85px;
-  background: #fceba8;
+  background: #9aa9cf;
   color: #000;
   border-radius: 8px;
   border: none;
   transition: 0.5s;
 }
 .form #form__inner .bying-form button:hover {
-  background: #fada5e;
-  box-shadow: 0 0 10px #fada5e, 0 0 40px #fada5e, 0 0 80px #fada5e;
+  background: #667db6;
+  box-shadow: 0 0 10px #667db6, 0 0 40px #667db6, 0 0 80px #667db6;
 }
 
 @media screen and (max-width: 1170px) {
@@ -191,6 +275,9 @@ main {
     padding: 15px 30vw;
     background: #a3a199;
   }
+  header .menu-list.show .bubble {
+    transform: scale(0);
+  }
   header .btn__menu {
     display: block;
     margin-right: 15px;
@@ -199,6 +286,19 @@ main {
 @media screen and (max-width: 500px) {
   header .header-logo img {
     width: 220px;
+  }
+
+  main section.home .home-presentation {
+    padding: 10px;
+  }
+  main section.colors .colors-presentation {
+    padding: 10px;
+  }
+  main section.noise .noise-presentation {
+    padding: 10px;
+  }
+  main section.comfort .comfort-presentation {
+    padding: 10px;
   }
 }
 

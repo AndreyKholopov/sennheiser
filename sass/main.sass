@@ -1,15 +1,83 @@
 main
-	background: #444
-	width: 100%
-	min-height: 100vh
-	display: flex
-	justify-content: center
-	align-items: center
+	
+	section
+		min-height: 100vh
+		display: flex
+		align-items: center
 
-	// .home
-		
-	// .colors
+		a
+			position: absolute
+			top: 0
 
-	// .noise
+			&#colors-a
+				top: 100vh
 
-	// .comfort
+			&#noise-a
+				top: 200vh
+
+			&#comfort-a
+				top: 300vh
+
+		h1
+			font-size: 3rem
+
+		p
+			font-size: 15px
+			line-height: 22px
+
+		&.home
+			background: linear-gradient(to right, $main-color, lighten($main-color,16), $main-color, lighten($main-color,16))
+			
+			.home-presentation
+				padding: 30px
+
+				h1
+					margin-left: 15px
+					margin-bottom: 25px
+					color: set-text-color($main-color)
+
+				p
+					color: set-text-color($main-color)
+
+		&.colors
+			background: linear-gradient(to right bottom, $colors-color, lighten($colors-color,16), $colors-color, lighten($colors-color,16))
+			
+			.colors-presentation
+				padding: 30px
+
+				h1
+					margin-left: 15px
+					margin-bottom: 25px
+					color: set-text-color($colors-color)
+
+				p
+					color: set-text-color($colors-color)
+
+
+		&.noise
+			background: linear-gradient(to right top, $noise-color, lighten($noise-color,16), $noise-color, lighten($noise-color,16))
+			
+			.noise-presentation
+				padding: 30px
+
+				h1
+					margin-left: 15px
+					margin-bottom: 25px
+					color: set-text-color($noise-color)
+
+				p
+					color: set-text-color($noise-color)
+
+		&.comfort
+			background: linear-gradient(to right, $comfort-color, lighten($comfort-color,16), $comfort-color, lighten($comfort-color,16))
+			
+			.comfort-presentation
+				padding: 30px
+
+				h1
+					margin-left: 15px
+					margin-bottom: 25px
+					color: set-text-color($comfort-color)
+
+				p
+					color: set-text-color($comfort-color)
