@@ -26,11 +26,20 @@ main
 				p
 					color: set-text-color($main-color)
 
+			.home-images
+				padding: 30px
+
+				img
+					position: relative
+					top: 20vh
+					max-height: 40vh
+					z-index: 0
+
 		&.colors
 			background: linear-gradient(to right bottom, $colors-color, lighten($colors-color,16), $colors-color, lighten($colors-color,16))
 			
 			.colors-presentation
-				padding: 30px
+				padding: 20px
 
 				h1
 					margin-left: 15px
@@ -40,11 +49,21 @@ main
 				p
 					color: set-text-color($colors-color)
 
+			.colors-images
+				padding: 20px
+
+				img
+					position: relative
+					top: 20vh
+					max-height: 40vh
+					z-index: 0
 
 		&.noise
+			flex-direction: column
 			background: linear-gradient(to right top, $noise-color, lighten($noise-color,16), $noise-color, lighten($noise-color,16))
 			
 			.noise-presentation
+				margin-top: 70px
 				padding: 30px
 
 				h1
@@ -55,11 +74,22 @@ main
 				p
 					color: set-text-color($noise-color)
 
+			.noise-images
+				img
+					position: relative
+					max-width: 80vw
+					max-height: 80vh
+					border: 5px solid $noise-color
+					border-radius: 20px
+					box-shadow: 0 0 10px $noise-color, 0 0 40px $noise-color, 0 0 80px $noise-color
+
 		&.comfort
+			flex-direction: column
 			background: linear-gradient(to right, $comfort-color, lighten($comfort-color,16), $comfort-color, lighten($comfort-color,16))
 			
 			.comfort-presentation
 				padding: 30px
+				margin-top: 70px
 
 				h1
 					margin-left: 15px
@@ -68,3 +98,12 @@ main
 
 				p
 					color: set-text-color($comfort-color)
+
+			.comfort-images
+				img
+					position: relative
+					max-width: 80vw
+					max-height: 80vh
+					border: 5px solid $comfort-color
+					border-radius: 20px
+					box-shadow: 0 0 10px $comfort-color, 0 0 40px $comfort-color, 0 0 80px $comfort-color

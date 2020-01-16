@@ -1,4 +1,11 @@
 @include mediaXL
+	main
+		section
+			&.home
+				.home-images
+					img
+						max-height: 60vh
+						top: 15vh
 
 @include mediaLg
 	header
@@ -37,9 +44,26 @@
 			display: block
 			margin-right: 15px
 
+
 @include mediaMd
+	main
+		section
+			&.colors
+				.colors-presentation
+					padding: 10px
+					padding-left: 0
+
+				.colors-images
+					padding: 5px
+
+					img
+						height: 23vh
 
 @include mediaSm
+	.form
+		#form__inner
+			margin: 10px auto
+
 	header
 		.header-logo
 			img
@@ -50,10 +74,30 @@
 			&.home
 				.home-presentation
 					padding: 10px
+					z-index: 1
+
+				.home-images
+					padding: 0
+
+					img
+						position: absolute
+						right: 10vw
+						top:58vh
 
 			&.colors
 				.colors-presentation
 					padding: 10px
+					z-index: 1
+
+				.colors-images
+					padding: 0
+
+					img
+						position: absolute
+						right: 0vw
+						top: 173vh
+						height: 25vh
+
 
 			&.noise
 				.noise-presentation

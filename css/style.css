@@ -18,6 +18,7 @@ header {
   align-items: center;
   height: 70px;
   background: #c7c6c1;
+  z-index: 4;
 }
 header .btn__menu {
   width: 30px;
@@ -109,11 +110,20 @@ main section.home .home-presentation h1 {
 main section.home .home-presentation p {
   color: #fff;
 }
+main section.home .home-images {
+  padding: 30px;
+}
+main section.home .home-images img {
+  position: relative;
+  top: 20vh;
+  max-height: 40vh;
+  z-index: 0;
+}
 main section.colors {
-  background: linear-gradient(to right bottom, #C9D6FF, white, #C9D6FF, white);
+  background: linear-gradient(to right bottom, #d9a7c7, #f2e0eb, #d9a7c7, #f2e0eb);
 }
 main section.colors .colors-presentation {
-  padding: 30px;
+  padding: 20px;
 }
 main section.colors .colors-presentation h1 {
   margin-left: 15px;
@@ -123,10 +133,21 @@ main section.colors .colors-presentation h1 {
 main section.colors .colors-presentation p {
   color: #000;
 }
+main section.colors .colors-images {
+  padding: 20px;
+}
+main section.colors .colors-images img {
+  position: relative;
+  top: 20vh;
+  max-height: 40vh;
+  z-index: 0;
+}
 main section.noise {
-  background: linear-gradient(to right top, #d9a7c7, #f2e0eb, #d9a7c7, #f2e0eb);
+  flex-direction: column;
+  background: linear-gradient(to right top, #aedbb1, #e6f4e7, #aedbb1, #e6f4e7);
 }
 main section.noise .noise-presentation {
+  margin-top: 70px;
   padding: 30px;
 }
 main section.noise .noise-presentation h1 {
@@ -137,19 +158,37 @@ main section.noise .noise-presentation h1 {
 main section.noise .noise-presentation p {
   color: #000;
 }
+main section.noise .noise-images img {
+  position: relative;
+  max-width: 80vw;
+  max-height: 80vh;
+  border: 5px solid #aedbb1;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #aedbb1, 0 0 40px #aedbb1, 0 0 80px #aedbb1;
+}
 main section.comfort {
-  background: linear-gradient(to right, #06beb6, #1ef8ee, #06beb6, #1ef8ee);
+  flex-direction: column;
+  background: linear-gradient(to right, #92a6b2, #c2cdd4, #92a6b2, #c2cdd4);
 }
 main section.comfort .comfort-presentation {
   padding: 30px;
+  margin-top: 70px;
 }
 main section.comfort .comfort-presentation h1 {
   margin-left: 15px;
   margin-bottom: 25px;
-  color: #fff;
+  color: #000;
 }
 main section.comfort .comfort-presentation p {
-  color: #fff;
+  color: #000;
+}
+main section.comfort .comfort-images img {
+  position: relative;
+  max-width: 80vw;
+  max-height: 80vh;
+  border: 5px solid #92a6b2;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #92a6b2, 0 0 40px #92a6b2, 0 0 80px #92a6b2;
 }
 
 .form #gray {
@@ -165,7 +204,7 @@ main section.comfort .comfort-presentation p {
 .form #form__inner {
   width: 300px;
   height: 550px;
-  margin: 20px auto;
+  margin: 30px auto;
   background: #bcc6df;
   border: 2px solid #667db6;
   box-shadow: 0 0 10px #667db6, 0 0 40px #667db6, 0 0 80px #667db6;
@@ -233,6 +272,12 @@ main section.comfort .comfort-presentation p {
   box-shadow: 0 0 10px #667db6, 0 0 40px #667db6, 0 0 80px #667db6;
 }
 
+@media screen and (min-width: 1171px) {
+  main section.home .home-images img {
+    max-height: 60vh;
+    top: 15vh;
+  }
+}
 @media screen and (max-width: 1170px) {
   header .menu-list {
     display: none;
@@ -270,16 +315,51 @@ main section.comfort .comfort-presentation p {
     margin-right: 15px;
   }
 }
+@media screen and (max-width: 768px) {
+  main section.colors .colors-presentation {
+    padding: 10px;
+    padding-left: 0;
+  }
+  main section.colors .colors-images {
+    padding: 5px;
+  }
+  main section.colors .colors-images img {
+    height: 23vh;
+  }
+}
 @media screen and (max-width: 500px) {
+  .form #form__inner {
+    margin: 10px auto;
+  }
+
   header .header-logo img {
     width: 220px;
   }
 
   main section.home .home-presentation {
     padding: 10px;
+    z-index: 1;
+  }
+  main section.home .home-images {
+    padding: 0;
+  }
+  main section.home .home-images img {
+    position: absolute;
+    right: 10vw;
+    top: 58vh;
   }
   main section.colors .colors-presentation {
     padding: 10px;
+    z-index: 1;
+  }
+  main section.colors .colors-images {
+    padding: 0;
+  }
+  main section.colors .colors-images img {
+    position: absolute;
+    right: 0vw;
+    top: 173vh;
+    height: 25vh;
   }
   main section.noise .noise-presentation {
     padding: 10px;
