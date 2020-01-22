@@ -1,7 +1,8 @@
 // Select DOM Items
 const menuBtn = document.querySelector('.btn__menu');
 const menuNav = document.querySelector('.menu-list');
-const sections = document.querySelectorAll('section');
+const main = document.querySelector('main');
+const sections = main.querySelectorAll('section');
 const bubble = document.querySelector('.bubble');
 
 //Set Initial State of Menu
@@ -37,11 +38,12 @@ function navCheck(entries){
 		const activeAnchor = document.querySelector(`[data-page=${className}]`);
 		const coords = activeAnchor.getBoundingClientRect();
 		const direction = {
-			height: coords.height,
+			height: coords.height + 10,
 			width: coords.width,
-			top: coords.top,
+			top: coords.top - 5,
 			left: coords.left
 		};
+		
 		if (entry.isIntersecting) {
 			bubble.style.setProperty('left', `${direction.left}px`);
 			bubble.style.setProperty('top', `${direction.top}px`);
